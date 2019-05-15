@@ -10,7 +10,13 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
+##print own twitter username
+#user = api.me()
+#print(user.name)
 
-user = api.me()
-print(user.name)
+user = api.get_user('itopenmind')
+print("Name:",user.name)
+print("Location:",user.location)
+print("Following:",user.friends_count)
+print("Followers:",user.followers_count)
 
